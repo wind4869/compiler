@@ -1,0 +1,9 @@
+L->S
+S->Pv|Pv@C|v@E|v@g|wB:S\|iB:S\|iB:Sl:S\|rv|rg
+P->x|y|z
+C->n|d|g
+E->E+T|E-T|T
+T->T*F|T/F|F
+F->(E)|v|n|d
+B->EOE
+O-><|>|=|!

@@ -1,0 +1,36 @@
+L:language
+S:statement
+P:type
+C:constant
+E:expression
+T:term
+F:factor
+B:boolean-expression
+O:comparsion-operator
+
+v:variable(id)
+n:int(const)
+d:double(const)
+g:string(const)
++:+
+-:-
+*:*
+/:/
+(:(
+):)
+@:=
+=:==
+!:!=
+>:>
+<:<
+:is:
+x:int(key)
+y:double(key)
+z:string(key)
+i:if(key)
+l:else(key)
+\:end(key)
+w:while(key)
+r:print(key)
+#:empty string
+$:ending symbol

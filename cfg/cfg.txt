@@ -1,0 +1,24 @@
+**********productions**********
+1.declaration:
+----------S->Pv|Pv@C        [S:statement, P:type, v:variable(id), C:constant, @:=]
+----------P->x|y|z          [x:int(key), y:double(key), z:string(key)]
+----------C->n|d|g          [n:int(const), d:double(const), g:string(const)]
+2.assignment:
+----------S->v@E|v@g        [E:expression]
+3.while-loop:
+----------S->wB:S\          [w:while(key), B:boolean-expression, \:end(key)]
+4.if-branch:
+----------S->iB:S\|iB:Sl:S\ [i:if(key), l:else(key)]
+5.output:
+----------S->rv|rg          [r:print(key)]
+6.arithmetic-expression:
+----------E->E+T|E-T|T      [T:term]
+----------T->T*F|T/F|F      [F:factor]
+----------F->(E)|v|n|d
+7.boolean-expression：
+----------B->EOE            [O:comparsion-operator]
+----------O-><|>|=|!        [=:==, !:!=]
+**********variables**********
+L S P C E T F B O           [L for the extension of this cfg]
+**********terminals**********
+v n d g + - * / ( ) @ = ! > < x y z i : l \ w r # $
