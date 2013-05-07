@@ -26,11 +26,11 @@ num_lex_error = 0
 fd = open('../lexer/s.txt')
 for l in fd:
     line = l[:-1].split(' ')
-    raw_result.extend(line)
     count = 0
     for item in line:
         if not item:
             continue
+        raw_result.append(item)
         if item in keywords:
             map_result.append(map_table[item])
             if item == 'if' or item == 'while':
