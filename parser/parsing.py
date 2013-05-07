@@ -26,6 +26,7 @@ counter = 0
 for item in source_block:
     if not item:
         source_block.remove(item)
+source_block.pop()
 
 for block in source_block:
     p = 0

@@ -1,14 +1,20 @@
+# A Toy Compiler Written by Python
+# Author: Hyq
+
 int a = 1
-int b = 2
+double b = 3.14
+string c = 'hehe'
+
 if a > b :
     if a > 3 :
         print a
     end
 else :
-    print b
+    print c
 end
+
 while a > b :
     if a > 3 :
-        a = a + b
+        a = a + b + 1
     end
 end

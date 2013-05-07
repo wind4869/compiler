@@ -7,6 +7,7 @@ keywords = [
     'else', 'end', 'while', 'print'
 ]
 map_table = {}
+symbols_table = {}
 map_result = []
 raw_result = []
 
@@ -28,6 +29,8 @@ for l in fd:
     line = l[:-1].split(' ')
     count = 0
     for item in line:
+        if item == '#':
+            break
         if not item:
             continue
         raw_result.append(item)
@@ -39,6 +42,7 @@ for l in fd:
                 semaphore += 1
         elif re.match(regex_id, item):
             map_result.append('v')
+            symbols_table[item] = ['v']
         elif re.match(regex_int, item):
             map_result.append('n')
         elif re.match(regex_double, item):
@@ -65,3 +69,4 @@ raw_result.reverse()
 if __name__ == '__main__':
     print source
     print raw_result
+    print symbols_table
