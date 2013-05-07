@@ -36,7 +36,7 @@ for block in source_block:
     raw_stack = []
     back_stack = []
     while_stack = []
-    print 'state_stack\tsymbol_stack\traw_stack\tinput\taction'
+    print 'state_stack\tsymbol_stack\tinput\taction'
 
     # Do parsing for each block
     while True:
@@ -51,7 +51,7 @@ for block in source_block:
             state_stack.append(action[1])
             symbol_stack.append(terminal)
             raw_stack.append(raw_result.pop())
-            print '%r\t%r\t%r\t%s\ts' % (state_stack, symbol_stack, raw_stack, block[p:])
+            print '%r\t%r\t%s\ts' % (state_stack, symbol_stack, block[p:])
 
             if terminal == 'w':
                 print 'shot'
@@ -125,10 +125,8 @@ for block in source_block:
             else:
                 raw_stack.append(key)
 
-            print '%r\t%r\t%r\t%s\tr' % (state_stack, symbol_stack, raw_stack, block[p:])
+            print '%r\t%r\t%s\tr' % (state_stack, symbol_stack, block[p:])
             print '>>> use productions:%s->%s' % (key, productions[key][index])
-            print back_stack
-            print while_stack
         elif action[0] == 'a':
             print '>>> finish parsing'
             break

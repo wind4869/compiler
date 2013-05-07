@@ -8,5 +8,7 @@ else :
     print b
 end
 while a > b :
-    a = a + b
+    if a > 3 :
+        a = a + b
+    end
 end
